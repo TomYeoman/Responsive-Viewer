@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="jquery@*" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+
+  <body>
+  	<select class="form-control" id="bootstrap-size-selector">
+  		<option value="320">Extra-Small (Mobile)</option>
+  		<option value="991">Small (Tablet)</option>
+  		<option value="1100">Medium (Laptop) </option>
+  		<option value="1280">Large (Desktop)</option>
+  		<option selected value="fullscreen">Fullscreen</option>
+  	</select>
+  
+  	<div class="resizeable-container"> <!-- resizeable-container is used by bootstrap responsive viewer in order to animate size -->
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+  			<input type="text" class="form-control">
+  		</div>
+  	</div>
+      
+    <script src="bootstrap_viewer.min.js"></script>
+
+    <script>
+    
+      // Initialise the responsive preview window, Found in "bootstrap_responsive_viewer"
+    	BOOTSTRAP_VIEWER.init({
+    		sizeDropdown: "#bootstrap-size-selector",   // This is the ID of your dropdown with all your sizes, It can contain any amount of sizes just give the value of the PX size
+    		resizeableContainer: ".resizeable-container", // ID / Class of the container you wish to become resizeable
+    		onlyImitateSmallerScreens: "true", // Allow / Disallow the ability to imitate a screen bigger than your own
+    		animationSpeed: "1000"	// Speed in MS of animation between sizes
+    	});
+    	
+    </script>
+  
+  </body>
+
+</html>
